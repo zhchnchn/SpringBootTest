@@ -1,0 +1,2 @@
+-- insert into demoinfo (title, content) values ('title11', 'content11');
+-- insert into demoinfo (title, content) values ('title22', 'content22');
