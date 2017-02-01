@@ -31,10 +31,30 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <!--###### SpringBoot devtools ######-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <!-- 只有设置为true时才会热启动，即当修改了html、css、js等这些静态资源后不用重启项目直接刷新即可 -->
+            <optional>true</optional>
+        </dependency>
         <!--###### lombok ###### -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 置为true，修改java文件后也就支持了热启动，不过这种方式是属于项目重启（速度比较快的项目重启） -->
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
