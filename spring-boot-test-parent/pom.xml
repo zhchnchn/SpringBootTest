@@ -19,6 +19,7 @@
     <modules>
         <module>spring-boot-common-test</module>
         <module>spring-boot-h2-test</module>
+        <module>spring-boot-thymeleaf-test</module>
     </modules>
 
     <properties>
